@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Pymol_POVRay_Tutorial</title></head><body>
+  PyMol and POVRay raytracing:<br>
+<br>
+Objective: Display a "surf" (molecular surface) of 193L (hen egg white
+lysozyme) in blue with all lysine residues displayed in purple. The
+product should look like:<br>
+<img style="width: 419px; height: 314px;" alt="193L final product" src="screens/pov1.bmp"><br>
+<br>
+Tutorial:<br>
+1. First load up pymol and import PDB 193L.<br>
+<img style="width: 792px; height: 447px;" alt="Pymol" src="screens/Screenshot-1.png"><br>
+<br>
+2. Remove the bound waters. Click on the "H" button and then select hide waters.<br>
+<img style="width: 796px; height: 449px;" alt="screen 2" src="screens/Screenshot-2.png"><br>
+<br>
+3. Now click on the "S" button and select surface. Then click the "C" button and change the surface color to blue. <br>
+<img style="width: 792px; height: 447px;" alt="screen 3" src="screens/Screenshot-3.png"><br>
+<br>
+4. In the pymol command line, type "sel resn lys" this will create a new selection with all lysine residues selected. <br>
+<img style="width: 792px; height: 447px;" alt="screen 4" src="screens/Screenshot-4.png"><br>
+<br>
+5. Now, with the residues still selected, click on the "C" button for that selection and change the color to purple. <br>
+<img style="width: 792px; height: 447px;" alt="" src="screens/Screenshot-5.png"><br>
+<br>
+6. Go to the menu bar --&gt; Display --&gt; Background --&gt;White<br>
+<img style="width: 792px; height: 447px;" alt="" src="screens/Screenshot-6.png"><br>
+<br>
+7. Now change the display quality. Again go to Display --&gt; Quality --&gt; Maximum Quality<br>
+<img style="width: 792px; height: 447px;" alt="" src="screens/Screenshot-7.png"><br>
+<br>
+8. Now its time to save the image as a POVRay file. Go to
+File--&gt;SaveImageAs--&gt;POV-Ray. Save with any filename you desire
+(example: povfile.pov). <br>
+9. Hopefully you have a windows version of POVRay installed. I am
+working in linux. Fortunately wine for linux does a really good job of
+running POVRay for windows in linux :)&gt;<br>
+<br>
+10. Find the povfile.pov and open it using POVRay. If windows doesn't
+automatically find the right executable to open the file with, look for
+pvengine.exe in the pov-ray installation folder in C:\ProgramFiles. If
+using wine and linux, the same executable (which opens a GUI interface
+for using POV-ray) can be found in the
+/home/username/.wine/drive_c/Program Files/POV-Ray for Windows
+v3.62/bin/ folder as pvengine.exe. As you can see, I am using POV-ray v
+3.62. <br>
+<br>
+11. Again, open the povfile.pov with the pvengine.exe<br>
+<br>
+<br>
+12. Now click the "Ini" button. <br>
+<img style="width: 700px; height: 395px;" alt="" src="screens/Screenshot-8.png"><br>
+<br>
+13. Choose the desired resolution for the image, then click "Render".&nbsp; Below is the full sized 1024x768 image I rendered.<br>
+<img style="width: 1024px; height: 768px;" alt="" src="screens/pov1.bmp"><br>
+<br>
+14. The rendered image will be saved as a bitmap file (.bmp) in the
+same directory as the povfile.pov. You have completed the tutorial!<br>
+Note that my structure looks different from the one done in the
+tutorial because I used a previously generated povfile.pov. :)&gt;<br>
+<br>
+<br>
+
+</body></html>
